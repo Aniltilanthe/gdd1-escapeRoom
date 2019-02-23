@@ -6,27 +6,33 @@ public class NavigationController : MonoBehaviour
 {
     DisplayController currentDisplay;
 
-    ZoomInObjectBehaviorController zoomInObjectBehavior;
+    public GameObject[] zoomInObjectBehaviors;
 
     // Start is called before the first frame update
     void Start()
     {
         currentDisplay = GameObject.Find("displayImage").GetComponent<DisplayController>();
 
-        zoomInObjectBehavior = GameObject.Find("zoomInObject").GetComponent<ZoomInObjectBehaviorController>();
+        zoomInObjectBehaviors = GameObject.FindGameObjectsWithTag("Interactable");
     }
 
     public void OnRightClickArrow() {
         currentDisplay.CurrentWall = currentDisplay.CurrentWall + 1;
 
-        zoomInObjectBehavior.reset();
+        foreach (GameObject zoomInObjectBehavior in zoomInObjectBehaviors)
+        {
+            zoomInObjectBehavior.GetComponent<ZoomInObjectBehaviorController>().reset();
+        }
     }
 
     public void OnLeftClickArrow()
     {
         currentDisplay.CurrentWall = currentDisplay.CurrentWall - 1;
 
-        zoomInObjectBehavior.reset();
+        foreach (GameObject zoomInObjectBehavior in zoomInObjectBehaviors)
+        {
+            zoomInObjectBehavior.GetComponent<ZoomInObjectBehaviorController>().reset();
+        }
     }
 
     public void onClickZoomReturn()
