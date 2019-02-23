@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class DisplayController : MonoBehaviour
 {
+    public enum State { normal, zoom };
+    public State CurrentState { get; set; }
 
+    //Rooms - 1,2,3,4
     public int CurrentRoom { get; set; }
 
-    public int CurrentStage {
-        get { return currentStage; }
+    //Walls - 1,2,3,4
+    public int CurrentWall {
+        get { return currentWall; }
         set {
             if (value == 5)
-                currentStage = 1;
+                currentWall = 1;
             else
-                currentStage = value;
+                currentWall = value;
         }
     }
-    private int currentStage;
-    private int previousStage;
+    private int currentWall;
+    private int previousWall;
+
+    private bool isZoomedIn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,42 +32,27 @@ public class DisplayController : MonoBehaviour
         CurrentRoom = 1;
 
         //Stage/wall in the room
-        previousStage = 0;
-        currentStage = 1;
+        previousWall = 0;
+        currentWall = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentStage != previousStage) {
-            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room"+ CurrentRoom.ToString() + "/Wall" + currentStage.ToString());
-            /*
-            switch (currentStage)
-            {
-                case 1:
-                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room1/Speaker");
-                    break;
-                case 2:
-                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room1/Door");
-                    break;
-                case 3:
-                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room1/Table");
-                    break;
-                case 4:
-                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room1/Paintings");
-                    break;
-                case 5:
-                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room1/Paper_zoom-in");
-                    break;
-                case 6:
-                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room1/Paper_zoom-in");
-                    break;
-                default:
-                    print("Incorrect intelligence level.");
-                    break;
-            }*/
+        if (currentWall != previousWall    &&  CurrentState.ToString().Equals(State.normal.ToString()) ) {
+     
+            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room"+ CurrentRoom.ToString() + "/Wall" + currentWall.ToString());
         }
 
-        previousStage = currentStage;
+        previousWall = currentWall;
+    }
+
+    public void showImage(string imageName)
+    {
+        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_" + imageName.ToString());
+    }
+
+    public void resetToCurrentLevel() {
+        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString());
     }
 }
