@@ -65,7 +65,7 @@ public class NavigationController : MonoBehaviour
 
     public void onClickUnlock()
     {
-        int[,] solutionRoom1 = new int[,] { { 1, 0, 1, 0 }, { 1, 0, 1, 0 }, { 0, 0, 0, 0 }, { 1, 1, 1, 1 } };
+        int[,] solutionRoom1 = new int[,] { { 2, 2, 2, 0 }, { 1, 2, 2, 1 }, { 1, 0, 0, 0 }, { 2, 1, 0, 0 } };
         
         Boolean solutionMatch = true;
 
