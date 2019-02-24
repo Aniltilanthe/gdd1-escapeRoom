@@ -7,6 +7,14 @@ TagManager:
   - Interactable
   - ZoomInObject
   - MorseCodeInput
+  - MorseCodeInput-1
+  - MorseCodeInput-2
+  - MorseCodeInput-3
+  - MorseCodeInput-4
+  - MorseCodeInputButton-1
+  - MorseCodeInputButton-2
+  - MorseCodeInputButton-3
+  - MorseCodeInputButton-4
   layers:
   - Default
   - TransparentFX

@@ -4,26 +4,35 @@ using UnityEngine;
 
 public class DisplayController : MonoBehaviour
 {
-    public enum State { normal, zoom };
+    public enum State { normal, zoom, levelComplete };
     public State CurrentState { get; set; }
 
     //Rooms - 1,2,3,4
-    public int CurrentRoom { get; set; }
+    public int CurrentRoom
+    {
+        get { return currentRoom; }
+        set
+        {
+            if (value == 5)
+                currentRoom = 4;
+            else
+                currentRoom = value;
+        }
+    }
+    private int currentRoom;
 
     //Walls - 1,2,3,4
     public int CurrentWall {
         get { return currentWall; }
         set {
             if (value == 5)
-                currentWall = 1;
+                onExit();
             else
                 currentWall = value;
         }
     }
     private int currentWall;
     private int previousWall;
-
-    private bool isZoomedIn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -54,5 +63,30 @@ public class DisplayController : MonoBehaviour
 
     public void resetToCurrentLevel() {
         GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString());
+    }
+
+    public void onLevelComplete()
+    {
+        showImage("End");
+        CurrentState = State.levelComplete;
+    }
+
+    public void onGoToNextLevel()
+    {
+        CurrentRoom = CurrentRoom + 1;
+        resetToLevelStart();
+    }
+
+    public void onExit()
+    {
+    }
+
+    public void resetToLevelStart()
+    {
+        //Stage/wall in the room
+        previousWall = 0;
+        currentWall = 1;
+
+        resetToCurrentLevel();
     }
 }

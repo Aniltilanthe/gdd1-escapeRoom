@@ -7,7 +7,7 @@ public class ButtonBehaviorController : MonoBehaviour
 {
     public enum ButtonId
     {
-        navigationButton, returnButton
+        navigationButton, returnButton, puzzleSubmissionButton, levelComplete
     }
 
     public ButtonId ThisButtonId;
@@ -28,11 +28,13 @@ public class ButtonBehaviorController : MonoBehaviour
 
     void Display()
     {
-        if (currentDisplay.CurrentState == DisplayController.State.zoom && ThisButtonId == ButtonId.returnButton)
+        if (currentDisplay.CurrentState == DisplayController.State.zoom)
         {
-            GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
-                GetComponent<Image>().color.b, 1);
-            GetComponent<Button>().enabled = true;
+            if (ThisButtonId == ButtonId.returnButton || ThisButtonId == ButtonId.puzzleSubmissionButton) {
+                GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
+                    GetComponent<Image>().color.b, 1);
+                GetComponent<Button>().enabled = true;
+            }
         }
 
         if (currentDisplay.CurrentState == DisplayController.State.normal && ThisButtonId == ButtonId.navigationButton)
@@ -41,22 +43,22 @@ public class ButtonBehaviorController : MonoBehaviour
                 GetComponent<Image>().color.b, 1);
             GetComponent<Button>().enabled = true;
         }
+
+        if (currentDisplay.CurrentState == DisplayController.State.levelComplete)
+        {
+            if (ThisButtonId == ButtonId.levelComplete)
+            {
+                GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
+                    GetComponent<Image>().color.b, 1);
+                GetComponent<Button>().enabled = true;
+            }
+        }
     }
 
     void HideDisplay() {
-        if (currentDisplay.CurrentState == DisplayController.State.normal
-            && ThisButtonId == ButtonId.returnButton) {
-            GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g, 
-                GetComponent<Image>().color.b, 0);
-            GetComponent<Button>().enabled = false;
-            this.transform.SetSiblingIndex(0);
-        }
-
-        if (currentDisplay.CurrentState == DisplayController.State.zoom && ThisButtonId == ButtonId.navigationButton) {
-            GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
-                GetComponent<Image>().color.b, 0);
-            GetComponent<Button>().enabled = false;
-            this.transform.SetSiblingIndex(0);
-        }
+        GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
+                    GetComponent<Image>().color.b, 0);
+        GetComponent<Button>().enabled = false;
+        this.transform.SetSiblingIndex(0);
     }
 }

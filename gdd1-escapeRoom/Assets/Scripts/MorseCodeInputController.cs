@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MorseCodeInputController : MonoBehaviour
 {
+
+    private DisplayController currentDisplay;
+    public GameObject[] morseCodeInputObjects;
 
     //Code - empty, 0, 1
     public int CurrentInput
@@ -19,7 +23,7 @@ public class MorseCodeInputController : MonoBehaviour
     }
     private int currentInput;
     private int previousInput;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -29,14 +33,20 @@ public class MorseCodeInputController : MonoBehaviour
         //input value
         previousInput = 0;
         currentInput = 0;
+
+
+        currentDisplay = GameObject.Find("displayImage").GetComponent<DisplayController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        HideDisplay();
+        Display();
+
         if (currentInput != previousInput )
         {
-            Debug.Log("on Morse Code controller currentInput != previous" + currentInput + "  previous " + previousInput );
             if (currentInput == 0) {
                 GetComponent<SpriteRenderer>().sprite = null;
             }
@@ -50,5 +60,38 @@ public class MorseCodeInputController : MonoBehaviour
         }
 
         previousInput = currentInput;
+    }
+
+
+    public void HideDisplay()
+    {
+
+        /*
+        for (int i = 1; i <= 4; i++)
+        {
+            if (i != currentDisplay.CurrentRoom)
+            {
+                morseCodeInputObjects = GameObject.FindGameObjectsWithTag("MorseCodeInput-" + currentDisplay.CurrentRoom);
+
+                foreach (GameObject morseCodeInputBtn in morseCodeInputObjects)
+                {
+                    morseCodeInputBtn.GetComponent<Input>().enabled = false;
+                }
+            }
+        } */
+    }
+
+
+    public void Display()
+    {
+        if (currentDisplay.CurrentState == DisplayController.State.zoom && currentDisplay.CurrentWall == 2)
+        {
+            string currentTag = gameObject.tag;
+            Debug.Log("current input " + currentTag);
+            if (currentTag == "MorseCodeInputButton-" + currentDisplay.CurrentRoom)
+            {
+                gameObject.SetActive(true);
+            }
+        }
     }
 }

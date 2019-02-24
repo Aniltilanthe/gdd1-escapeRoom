@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 93341395}
   m_Layer: 0
   m_Name: morseCodeInput-R3C3
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,8 +138,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93341393}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 485, y: -160, z: 0}
-  m_LocalScale: {x: 180.00058, y: 149.99954, z: 1.000094}
+  m_LocalPosition: {x: 500, y: -160, z: 0}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 20
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 202461407}
   m_Layer: 0
   m_Name: morseCodeInput-R3C2
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,7 +373,7 @@ Transform:
   m_GameObject: {fileID: 202461405}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 295, y: -160, z: 0}
-  m_LocalScale: {x: 180.00058, y: 149.99954, z: 1.000094}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 18
@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 240428170}
   m_Layer: 5
   m_Name: morseCodeInputButton-R3C1
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 331051105}
   m_Layer: 0
   m_Name: morseCodeInput-R1C2
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -783,7 +783,7 @@ Transform:
   m_GameObject: {fileID: 331051103}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 295, y: 340.00003, z: 0}
-  m_LocalScale: {x: 180.00058, y: 150, z: 1.000094}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 2
@@ -1087,7 +1087,7 @@ GameObject:
   - component: {fileID: 616900692}
   m_Layer: 5
   m_Name: morseCodeInputButton-R3C4
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1231,7 +1231,7 @@ GameObject:
   - component: {fileID: 639194271}
   m_Layer: 0
   m_Name: morseCodeInput-R4C1
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1244,7 +1244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639194269}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90, y: -410, z: 0}
+  m_LocalPosition: {x: 90, y: -400, z: 0}
   m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
@@ -1358,7 +1358,7 @@ GameObject:
   - component: {fileID: 713002304}
   m_Layer: 0
   m_Name: morseCodeInput-R1C4
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1371,8 +1371,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713002302}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 690, y: 340.00003, z: 0}
-  m_LocalScale: {x: 180.00058, y: 149.99954, z: 1.000094}
+  m_LocalPosition: {x: 700, y: 340.00003, z: 0}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 6
@@ -1450,7 +1450,7 @@ GameObject:
   - component: {fileID: 772271787}
   m_Layer: 0
   m_Name: morseCodeInput-R1C1
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1544,7 +1544,7 @@ GameObject:
   - component: {fileID: 772944813}
   m_Layer: 5
   m_Name: morseCodeInputButton-R4C3
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1690,7 +1690,7 @@ GameObject:
   - component: {fileID: 773928092}
   m_Layer: 5
   m_Name: morseCodeInputButton-R3C2
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1834,7 +1834,7 @@ GameObject:
   - component: {fileID: 789098566}
   m_Layer: 0
   m_Name: morseCodeInput-R3C1
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1913,6 +1913,148 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2e9d76cf21bcf4f8b6beb894eab240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &818297825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 818297826}
+  - component: {fileID: 818297830}
+  - component: {fileID: 818297829}
+  - component: {fileID: 818297828}
+  - component: {fileID: 818297827}
+  m_Layer: 5
+  m_Name: LevelComplete
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &818297826
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818297825}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.8004632, y: 1.000094, z: 1.000094}
+  m_Children: []
+  m_Father: {fileID: 1507167959}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 64, y: 37}
+  m_SizeDelta: {x: 70, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &818297827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818297825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d02aaf9e911a84d96d0941f17a6865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisButtonId: 3
+--- !u!114 &818297828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818297825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 818297829}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1507167960}
+        m_MethodName: onGoToNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &818297829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818297825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 7a9d8e59b161c0d4a9f66c9485b10a7d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &818297830
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818297825}
+  m_CullTransparentMesh: 0
 --- !u!1 &847098699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,7 +2178,7 @@ GameObject:
   - component: {fileID: 872830957}
   m_Layer: 0
   m_Name: morseCodeInput-R4C2
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2049,8 +2191,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872830955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 295, y: -410, z: 0}
-  m_LocalScale: {x: 180.00058, y: 149.99954, z: 1.000094}
+  m_LocalPosition: {x: 295, y: -400, z: 0}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 26
@@ -2127,10 +2269,9 @@ GameObject:
   - component: {fileID: 937388486}
   - component: {fileID: 937388485}
   - component: {fileID: 937388484}
-  - component: {fileID: 937388483}
   m_Layer: 5
   m_Name: morseCodeInputButton-R1C1
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2154,18 +2295,6 @@ RectTransform:
   m_AnchoredPosition: {x: -9, y: 245}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &937388483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937388481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab471339a225d6c4cafe0633e7cfcdec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &937388484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2276,7 +2405,7 @@ GameObject:
   - component: {fileID: 1136808347}
   m_Layer: 5
   m_Name: morseCodeInputButton-R2C2
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2740,7 +2869,7 @@ GameObject:
   - component: {fileID: 1213380549}
   m_Layer: 0
   m_Name: morseCodeInput-R2C4
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2753,8 +2882,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213380547}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 690, y: 100, z: 0}
-  m_LocalScale: {x: 180.00058, y: 150, z: 1.000094}
+  m_LocalPosition: {x: 700, y: 100, z: 0}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 14
@@ -2832,7 +2961,7 @@ GameObject:
   - component: {fileID: 1260792479}
   m_Layer: 0
   m_Name: morseCodeInput-R3C4
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2845,8 +2974,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260792477}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 690, y: -160, z: 0}
-  m_LocalScale: {x: 180.00058, y: 149.99954, z: 1.000094}
+  m_LocalPosition: {x: 700, y: -160, z: 0}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 22
@@ -2926,7 +3055,7 @@ GameObject:
   - component: {fileID: 1282565784}
   m_Layer: 5
   m_Name: morseCodeInputButton-R1C2
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3070,7 +3199,7 @@ GameObject:
   - component: {fileID: 1359935912}
   m_Layer: 0
   m_Name: morseCodeInput-R2C3
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3083,8 +3212,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359935910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 485, y: 100, z: 0}
-  m_LocalScale: {x: 180.00058, y: 150, z: 1.000094}
+  m_LocalPosition: {x: 500, y: 100, z: 0}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 12
@@ -3164,7 +3293,7 @@ GameObject:
   - component: {fileID: 1493574621}
   m_Layer: 5
   m_Name: morseCodeInputButton-R4C1
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3391,6 +3520,8 @@ RectTransform:
   - {fileID: 524794190}
   - {fileID: 1199431539}
   - {fileID: 858911078}
+  - {fileID: 1840287522}
+  - {fileID: 818297826}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3412,6 +3543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomInObjectBehaviors: []
+  morseCodeInputObjects: []
 --- !u!114 &1507167961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3439,7 +3571,7 @@ GameObject:
   - component: {fileID: 1508490610}
   m_Layer: 5
   m_Name: morseCodeInputButton-R3C3
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3585,7 +3717,7 @@ GameObject:
   - component: {fileID: 1511068928}
   m_Layer: 5
   m_Name: morseCodeInputButton-R4C2
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3731,7 +3863,7 @@ GameObject:
   - component: {fileID: 1515547747}
   m_Layer: 5
   m_Name: morseCodeInputButton-R4C4
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3877,7 +4009,7 @@ GameObject:
   - component: {fileID: 1528257298}
   m_Layer: 5
   m_Name: morseCodeInputButton-R1C3
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4021,7 +4153,7 @@ GameObject:
   - component: {fileID: 1572703422}
   m_Layer: 0
   m_Name: morseCodeInput-R4C4
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4034,8 +4166,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572703420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 690, y: -410, z: 0}
-  m_LocalScale: {x: 180.00058, y: 149.99954, z: 1.000094}
+  m_LocalPosition: {x: 700, y: -400, z: 0}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 30
@@ -4115,7 +4247,7 @@ GameObject:
   - component: {fileID: 1688633450}
   m_Layer: 5
   m_Name: morseCodeInputButton-R2C4
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4259,7 +4391,7 @@ GameObject:
   - component: {fileID: 1688892211}
   m_Layer: 0
   m_Name: morseCodeInput-R2C1
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4439,7 +4571,7 @@ GameObject:
   - component: {fileID: 1741333407}
   m_Layer: 5
   m_Name: morseCodeInputButton-R2C1
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4570,6 +4702,148 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741333405}
   m_CullTransparentMesh: 0
+--- !u!1 &1840287521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840287522}
+  - component: {fileID: 1840287526}
+  - component: {fileID: 1840287525}
+  - component: {fileID: 1840287524}
+  - component: {fileID: 1840287523}
+  m_Layer: 5
+  m_Name: Continue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1840287522
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840287521}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.8002634, y: 1.000094, z: 1.000094}
+  m_Children: []
+  m_Father: {fileID: 1507167959}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 65, y: -135}
+  m_SizeDelta: {x: 70, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1840287523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840287521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d02aaf9e911a84d96d0941f17a6865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisButtonId: 2
+--- !u!114 &1840287524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840287521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1840287525}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1507167960}
+        m_MethodName: onClickUnlock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1840287525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840287521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 7a9d8e59b161c0d4a9f66c9485b10a7d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1840287526
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840287521}
+  m_CullTransparentMesh: 0
 --- !u!1 &1858964993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4583,7 +4857,7 @@ GameObject:
   - component: {fileID: 1858964995}
   m_Layer: 0
   m_Name: morseCodeInput-R4C3
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4596,8 +4870,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858964993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 485, y: -410, z: 0}
-  m_LocalScale: {x: 180.00058, y: 149.99954, z: 1.000094}
+  m_LocalPosition: {x: 500, y: -400, z: 0}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 28
@@ -4677,7 +4951,7 @@ GameObject:
   - component: {fileID: 1879070391}
   m_Layer: 5
   m_Name: morseCodeInputButton-R2C3
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4887,7 +5161,7 @@ GameObject:
   - component: {fileID: 1885914864}
   m_Layer: 0
   m_Name: morseCodeInput-R1C3
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4900,8 +5174,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885914862}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 485, y: 340.00003, z: 0}
-  m_LocalScale: {x: 180.00058, y: 149.99954, z: 1.000094}
+  m_LocalPosition: {x: 500, y: 340.00003, z: 0}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 4
@@ -5065,7 +5339,7 @@ GameObject:
   - component: {fileID: 2056620287}
   m_Layer: 0
   m_Name: morseCodeInput-R2C2
-  m_TagString: MorseCodeInput
+  m_TagString: MorseCodeInput-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5079,7 +5353,7 @@ Transform:
   m_GameObject: {fileID: 2056620285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 295, y: 100, z: 0}
-  m_LocalScale: {x: 180.00058, y: 150, z: 1.000094}
+  m_LocalScale: {x: 130, y: 130, z: 1.000094}
   m_Children: []
   m_Father: {fileID: 858911078}
   m_RootOrder: 10
@@ -5159,7 +5433,7 @@ GameObject:
   - component: {fileID: 2135763759}
   m_Layer: 5
   m_Name: morseCodeInputButton-R1C4
-  m_TagString: Untagged
+  m_TagString: MorseCodeInputButton-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
