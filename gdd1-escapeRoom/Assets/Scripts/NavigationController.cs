@@ -11,8 +11,9 @@ public class NavigationController : MonoBehaviour
 
     public GameObject[] morseCodeInputObjects;
 
-    private int morseCodeRowCount;
-    private int morseCodeColumnCount;
+    //Solution for Room puzzle
+    int[,] solutionRoom1 = new int[,] { { 2, 2, 2, 0 }, { 1, 2, 2, 1 }, { 1, 0, 0, 0 }, { 2, 1, 0, 0 } };
+
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +66,6 @@ public class NavigationController : MonoBehaviour
 
     public void onClickUnlock()
     {
-        int[,] solutionRoom1 = new int[,] { { 2, 2, 2, 0 }, { 1, 2, 2, 1 }, { 1, 0, 0, 0 }, { 2, 1, 0, 0 } };
         
         Boolean solutionMatch = true;
 
