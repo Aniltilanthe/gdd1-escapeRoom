@@ -42,8 +42,8 @@ public class MorseCodeInputController : MonoBehaviour
     void Update()
     {
 
-        HideDisplay();
-        Display();
+        //HideDisplay();
+        //Display();
 
         if (currentInput != previousInput )
         {
@@ -87,7 +87,7 @@ public class MorseCodeInputController : MonoBehaviour
         if (currentDisplay.CurrentState == DisplayController.State.zoom && currentDisplay.CurrentWall == 2)
         {
             string currentTag = gameObject.tag;
-            Debug.Log("current input " + currentTag);
+
             if (currentTag == "MorseCodeInputButton-" + currentDisplay.CurrentRoom)
             {
                 gameObject.SetActive(true);
