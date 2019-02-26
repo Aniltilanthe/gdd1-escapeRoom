@@ -33,7 +33,7 @@ public class ZoomInObjectBehaviorController : MonoBehaviour
         //Display();
     }
 
-
+    /*
     void HideDisplay()
     {
         gameObject.SetActive(false);
@@ -117,5 +117,5 @@ public class ZoomInObjectBehaviorController : MonoBehaviour
                 gameObject.SetActive(true);
             }
         }
-    }
+    } */
 }

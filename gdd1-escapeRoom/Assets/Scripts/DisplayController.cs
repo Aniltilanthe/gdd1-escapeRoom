@@ -36,8 +36,6 @@ public class DisplayController : MonoBehaviour
     private int currentWall;
     private int previousWall;
 
-    private GameObject[] morseCodeInputObjects;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -91,34 +89,10 @@ public class DisplayController : MonoBehaviour
         previousWall = 0;
         currentWall = 1;
 
-        resetToCurrentLevel();
+        //state to normal
+        CurrentState = State.normal;
 
-        //TODO - do this with object room manager
-        //resetOtherLevelUIElements();
-    }
-
-    public void resetOtherLevelUIElements()
-    {
-
-        for (int i = 1; i <= 4; i++)
-        {
-            if (i != CurrentRoom)
-            {
-                morseCodeInputObjects = GameObject.FindGameObjectsWithTag("MorseCodeInput-" + i);
-
-                foreach (GameObject morseCodeInput in morseCodeInputObjects)
-                {
-                    morseCodeInput.SetActive(false);
-                }
-            } else
-            {
-                morseCodeInputObjects = GameObject.FindGameObjectsWithTag("MorseCodeInput-" + i);
-
-                foreach (GameObject morseCodeInput in morseCodeInputObjects)
-                {
-                    morseCodeInput.SetActive(true);
-                }
-            }
-        }
+        //set image to start - first wall
+        resetToCurrentLevel();        
     }
 }

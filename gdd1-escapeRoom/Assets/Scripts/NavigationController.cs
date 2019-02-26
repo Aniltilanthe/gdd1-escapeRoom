@@ -44,6 +44,29 @@ public class NavigationController : MonoBehaviour
         }
     }
 
+    public void onClickContinue()
+    {
+        //when level is not completed
+        if (currentDisplay.CurrentState != DisplayController.State.levelComplete)
+        {
+            //when not puzzle solve submission wall
+            if (currentDisplay.CurrentWall != 2)
+            {
+                onClickZoomReturn();
+            }
+            else
+            {
+                //when puzzle solve submission
+                onClickUnlock();
+            }
+        }
+        //when level is completed
+        else
+        {
+            onGoToNextLevel();
+        }
+    }
+
     public void onClickZoomReturn()
     {
 
@@ -59,7 +82,6 @@ public class NavigationController : MonoBehaviour
         currentDisplay.resetToCurrentLevel();
 
     }
-
 
     public void onGoToNextLevel()
     {

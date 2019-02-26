@@ -7,7 +7,7 @@ public class ButtonBehaviorController : MonoBehaviour
 {
     public enum ButtonId
     {
-        navigationButton, returnButton, puzzleSubmissionButton, levelComplete
+        navigationButton, returnButton, puzzleSubmissionButton, levelComplete, continueButton
     }
 
     public ButtonId ThisButtonId;
@@ -30,7 +30,7 @@ public class ButtonBehaviorController : MonoBehaviour
     {
         if (currentDisplay.CurrentState == DisplayController.State.zoom)
         {
-            if (ThisButtonId == ButtonId.returnButton || ThisButtonId == ButtonId.puzzleSubmissionButton) {
+            if (ThisButtonId == ButtonId.returnButton || ThisButtonId == ButtonId.continueButton) {
                 GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
                     GetComponent<Image>().color.b, 1);
                 GetComponent<Button>().enabled = true;
@@ -46,7 +46,7 @@ public class ButtonBehaviorController : MonoBehaviour
 
         if (currentDisplay.CurrentState == DisplayController.State.levelComplete)
         {
-            if (ThisButtonId == ButtonId.levelComplete)
+            if (ThisButtonId == ButtonId.continueButton)
             {
                 GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
                     GetComponent<Image>().color.b, 1);
