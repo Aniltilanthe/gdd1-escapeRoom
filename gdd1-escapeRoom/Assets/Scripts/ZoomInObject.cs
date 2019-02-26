@@ -8,7 +8,9 @@ public class ZoomInObject : MonoBehaviour, IInteractable
 
     public void Interact(DisplayController currentDisplay)
     {
-        gameObject.layer = 2;
+        Debug.Log("Zoom in object " + zoomedInImageName);
+        //Bug fix - for unable to click again ! - changing Layer from Default to another
+        //gameObject.layer = 2;
 
         currentDisplay.showImage(zoomedInImageName);
 

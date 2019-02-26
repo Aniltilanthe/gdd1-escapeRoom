@@ -27,8 +27,10 @@ public class ZoomInObjectBehaviorController : MonoBehaviour
     }
 
     public void reset() {
-        HideDisplay();
-        Display();
+
+        Debug.Log("Zoom in object behaviour controller Reset Called ");
+        //HideDisplay();
+        //Display();
     }
 
 
@@ -36,6 +38,7 @@ public class ZoomInObjectBehaviorController : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
     void Display()
     {
         if (ThisRoomId == RoomId.one)

@@ -26,7 +26,9 @@ public class DisplayController : MonoBehaviour
         get { return currentWall; }
         set {
             if (value == 5)
-                onExit();
+                currentWall = 1;
+            else if (value == 0)
+                currentWall = 4;
             else
                 currentWall = value;
         }
@@ -91,7 +93,8 @@ public class DisplayController : MonoBehaviour
 
         resetToCurrentLevel();
 
-        resetOtherLevelUIElements();
+        //TODO - do this with object room manager
+        //resetOtherLevelUIElements();
     }
 
     public void resetOtherLevelUIElements()

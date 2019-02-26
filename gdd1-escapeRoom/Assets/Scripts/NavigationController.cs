@@ -47,8 +47,11 @@ public class NavigationController : MonoBehaviour
     public void onClickZoomReturn()
     {
 
+        Debug.Log("onClickZoomReturn ");
+
         var zoomInObjects = FindObjectsOfType<ZoomInObject>();
         foreach (var zoomInObj in zoomInObjects) {
+            Debug.Log("old layer " + zoomInObj.gameObject.layer);
             zoomInObj.gameObject.layer = 0;
         }
 
