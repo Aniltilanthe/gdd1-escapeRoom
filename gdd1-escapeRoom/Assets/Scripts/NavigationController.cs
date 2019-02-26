@@ -30,7 +30,7 @@ public class NavigationController : MonoBehaviour
 
         foreach (GameObject zoomInObjectBehavior in zoomInObjectBehaviors)
         {
-            zoomInObjectBehavior.GetComponent<ZoomInObjectBehaviorController>().reset();
+            //zoomInObjectBehavior.GetComponent<ZoomInObjectBehaviorController>().reset();
         }
     }
 
@@ -40,7 +40,7 @@ public class NavigationController : MonoBehaviour
 
         foreach (GameObject zoomInObjectBehavior in zoomInObjectBehaviors)
         {
-            zoomInObjectBehavior.GetComponent<ZoomInObjectBehaviorController>().reset();
+            //zoomInObjectBehavior.GetComponent<ZoomInObjectBehaviorController>().reset();
         }
     }
 
