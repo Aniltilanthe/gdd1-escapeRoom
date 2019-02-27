@@ -42,7 +42,7 @@ public class DisplayController : MonoBehaviour
     void Start()
     {
         //Start with Room1
-        CurrentRoom = 2;
+        CurrentRoom = 1;
 
         //Stage/wall in the room
         previousWall = 0;
