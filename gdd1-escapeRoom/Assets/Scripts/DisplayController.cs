@@ -36,23 +36,34 @@ public class DisplayController : MonoBehaviour
     private int currentWall;
     private int previousWall;
 
+    private Dictionary<string, Room> roomInformation = new Dictionary<string, Room>();
+
     // Start is called before the first frame update
     void Start()
     {
         //Start with Room1
-        CurrentRoom = 1;
+        CurrentRoom = 2;
 
         //Stage/wall in the room
         previousWall = 0;
         currentWall = 1;
+
+        //init room information
+        initRoomInformation();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (currentWall != previousWall    &&  CurrentState.ToString().Equals(State.normal.ToString()) ) {
-     
-            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room"+ CurrentRoom.ToString() + "/Wall" + currentWall.ToString());
+
+            string room = "Room" + CurrentRoom.ToString();
+            Room  currentRoomObj = roomInformation[room];
+            string wallImageName = currentRoomObj.wallInformation["Wall" + currentWall.ToString()];
+
+            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(room + "/" + wallImageName);
+
+            //GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room"+ CurrentRoom.ToString() + "/Wall" + currentWall.ToString());
         }
 
         previousWall = currentWall;
@@ -60,11 +71,25 @@ public class DisplayController : MonoBehaviour
 
     public void showImage(string imageName)
     {
-        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_" + imageName.ToString());
+        string room = "Room" + CurrentRoom.ToString();
+        Room currentRoomObj = roomInformation[room];
+        string wallImageName = currentRoomObj.wallInformation["Wall" + currentWall.ToString()];
+
+        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(room + "/" + wallImageName + "_" + imageName.ToString());
+
+        //GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_" + imageName.ToString());
     }
 
     public void resetToCurrentLevel() {
-        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString());
+
+
+        string room = "Room" + CurrentRoom.ToString();
+        Room currentRoomObj = roomInformation[room];
+        string wallImageName = currentRoomObj.wallInformation["Wall" + currentWall.ToString()];
+
+        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(room + "/" + wallImageName );
+
+        //GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString());
     }
 
     public void onLevelComplete()
@@ -92,7 +117,34 @@ public class DisplayController : MonoBehaviour
         //state to normal
         CurrentState = State.normal;
 
-        //set image to start - first wall
+        //reset images
         resetToCurrentLevel();        
+    }
+
+    public void updateRoomInformation(string room, string wall, string newWallImageName)
+    {
+        Room currentRoomObj = roomInformation[room];
+
+        currentRoomObj.wallInformation.Remove(wall);
+
+        currentRoomObj.wallInformation.Add(wall, newWallImageName);
+
+        resetToCurrentLevel();
+    }
+
+
+    //Initial room information - Room and Wall correcponding Images
+    private void initRoomInformation()
+    {
+
+        Room room1 = new Room("Wall1", "Wall2", "Wall3", "Wall4");
+        Room room2 = new Room("Wall1", "Wall2", "Wall3", "Wall4");
+        Room room3 = new Room("Wall1", "Wall2", "Wall3", "Wall4");
+        Room room4 = new Room("Wall1", "Wall2", "Wall3", "Wall4");
+
+        roomInformation.Add("Room1", room1);
+        roomInformation.Add("Room2", room2);
+        roomInformation.Add("Room3", room3);
+        roomInformation.Add("Room4", room4);
     }
 }

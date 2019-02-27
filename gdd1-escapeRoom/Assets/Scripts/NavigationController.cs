@@ -13,6 +13,9 @@ public class NavigationController : MonoBehaviour
 
     //Solution for Room puzzle
     int[,] solutionRoom1 = new int[,] { { 2, 2, 2, 0 }, { 1, 2, 2, 1 }, { 1, 0, 0, 0 }, { 2, 1, 0, 0 } };
+    int[,] solutionRoom2 = new int[,] { { 1, 2, 2, 2, 2, 0 }, { 1, 1, 1, 1, 1, 0 }, { 1, 2, 2, 2, 2, 0 }, { 1, 2, 2, 2, 2, 0 }, { 2, 2, 2, 2, 1, 0 }, { 2, 2, 1, 1, 1, 0} };
+    int[,] solutionRoom3 = new int[,] { { 1, 2, 2, 2, 2, 0 }, { 1, 1, 1, 1, 1, 0 }, { 1, 2, 2, 2, 2, 0 }, { 1, 2, 2, 2, 2, 0 }, { 2, 2, 2, 2, 1, 0 }, { 2, 2, 1, 1, 1, 0 } };
+    int[,] solutionRoom4 = new int[,] { { 1, 2, 2, 2, 2, 0 }, { 1, 1, 1, 1, 1, 0 }, { 1, 2, 2, 2, 2, 0 }, { 1, 2, 2, 2, 2, 0 }, { 2, 2, 2, 2, 1, 0 }, { 2, 2, 1, 1, 1, 0 } };
 
 
     // Start is called before the first frame update
@@ -106,8 +109,32 @@ public class NavigationController : MonoBehaviour
             int row = (int)Char.GetNumericValue(rowColArr[1]) - 1 ;
             int col = (int)Char.GetNumericValue(rowColArr[3]) - 1;
             
-            if ( solutionRoom1[row, col]  != currentRowInput) {
-                solutionMatch = false;
+
+            if (currentDisplay.CurrentRoom == 1)
+            {
+                if (solutionRoom1[row, col] != currentRowInput)
+                {
+                    solutionMatch = false;
+                }
+            }
+            else if (currentDisplay.CurrentRoom == 2)
+            {
+                if (solutionRoom2[row, col] != currentRowInput)
+                {
+                    solutionMatch = false;
+                }
+            } else if (currentDisplay.CurrentRoom == 3)
+            {
+                if (solutionRoom3[row, col] != currentRowInput)
+                {
+                    solutionMatch = false;
+                }
+            } else if (currentDisplay.CurrentRoom == 4)
+            {
+                if (solutionRoom4[row, col] != currentRowInput)
+                {
+                    solutionMatch = false;
+                }
             }
         }
 
