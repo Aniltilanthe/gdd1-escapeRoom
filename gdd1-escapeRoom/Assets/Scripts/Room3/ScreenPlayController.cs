@@ -40,7 +40,7 @@ public class ScreenPlayController : MonoBehaviour
         //source.playOnAwake = false;
     }
 
-    void playSound()
+    public void playSound()
     {
         Debug.Log("Sound");
         audioo = gameObject.AddComponent<AudioSource>();
