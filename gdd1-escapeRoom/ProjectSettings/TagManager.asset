@@ -15,6 +15,14 @@ TagManager:
   - MorseCodeInputButton-2
   - MorseCodeInputButton-3
   - MorseCodeInputButton-4
+  - DialPadButton
+  - DialPadLight
+  - RotatingDial-1
+  - RotatingDial
+  - ScreenInput
+  - ScreenButton
+  - ScreenInput2
+  - ScreenButton2
   layers:
   - Default
   - TransparentFX
