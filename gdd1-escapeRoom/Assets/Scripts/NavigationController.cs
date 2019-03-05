@@ -470,10 +470,13 @@ public class NavigationController : MonoBehaviour
             {
                 Debug.Log("Solution matched");
 
+                currentDisplay.PlayPuzzleSuccess();
+
                 currentDisplay.onLevelComplete();
             }
             else
             {
+                currentDisplay.PlayPuzzleFail();
                 Debug.Log("Solution Not matched");
             }
         }

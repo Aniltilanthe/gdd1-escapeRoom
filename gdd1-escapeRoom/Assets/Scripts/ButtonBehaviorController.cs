@@ -32,8 +32,11 @@ public class ButtonBehaviorController : MonoBehaviour
         // show only navigation buttons
         if (currentDisplay.CurrentState == DisplayController.State.normal && ThisButtonId == ButtonId.navigationButton)
         {
-            GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
-                GetComponent<Image>().color.b, 1);
+            if (GetComponent<Image>() != null)
+            {
+                GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
+                   GetComponent<Image>().color.b, 1);
+            }
             GetComponent<Button>().enabled = true;
         }
 
@@ -43,15 +46,21 @@ public class ButtonBehaviorController : MonoBehaviour
         if (currentDisplay.CurrentState == DisplayController.State.zoom)
         {
             if (ThisButtonId == ButtonId.returnButton) {
-                GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
-                    GetComponent<Image>().color.b, 1);
+                if (GetComponent<Image>() != null)
+                {
+                    GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
+                        GetComponent<Image>().color.b, 1);
+                }
                 GetComponent<Button>().enabled = true;
             }
 
             if (currentDisplay.CurrentWall == 2 && ThisButtonId == ButtonId.continueButton)
             {
-                GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
-                    GetComponent<Image>().color.b, 1);
+                if (GetComponent<Image>() != null)
+                {
+                    GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
+                       GetComponent<Image>().color.b, 1);
+                }
                 GetComponent<Button>().enabled = true;
             }
         }
@@ -77,8 +86,11 @@ public class ButtonBehaviorController : MonoBehaviour
         {
             if (ThisButtonId != ButtonId.navigationButton)
             {
-                GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
-                            GetComponent<Image>().color.b, 0);
+                if (GetComponent<Image>() != null)
+                {
+                    GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
+                                GetComponent<Image>().color.b, 0);
+                }
                 GetComponent<Button>().enabled = false;
                 this.transform.SetSiblingIndex(0);
             }
@@ -92,8 +104,11 @@ public class ButtonBehaviorController : MonoBehaviour
         {
             if (ThisButtonId == ButtonId.navigationButton)
             {
-                GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
+                if (GetComponent<Image>() != null)
+                {
+                    GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
                             GetComponent<Image>().color.b, 0);
+                }
                 GetComponent<Button>().enabled = false;
                 this.transform.SetSiblingIndex(0);
             }
@@ -101,8 +116,11 @@ public class ButtonBehaviorController : MonoBehaviour
             //show continue button only on wall 2
             if (currentDisplay.CurrentWall != 2 && ThisButtonId == ButtonId.continueButton) 
             {
-                GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
+                if (GetComponent<Image>() != null)
+                {
+                    GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
                             GetComponent<Image>().color.b, 0);
+                }
                 GetComponent<Button>().enabled = false;
                 this.transform.SetSiblingIndex(0);
             }
@@ -113,8 +131,11 @@ public class ButtonBehaviorController : MonoBehaviour
         {
             if (ThisButtonId != ButtonId.continueButton)
             {
-                GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
+                if (GetComponent<Image>() != null)
+                {
+                    GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
                             GetComponent<Image>().color.b, 0);
+                }
                 GetComponent<Button>().enabled = false;
                 this.transform.SetSiblingIndex(0);
             }

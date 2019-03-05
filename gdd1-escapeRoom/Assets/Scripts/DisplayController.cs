@@ -51,18 +51,24 @@ public class DisplayController : MonoBehaviour
 
     private Dictionary<string, Room> roomInformation = new Dictionary<string, Room>();
 
+    //For playing audio
+    private AudioSource audioPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
         //Start with Room1
-        CurrentRoom = 3;
-        Debug.Log("Som tu");
+        CurrentRoom = 1;
+
         //Stage/wall in the room
         previousWall = 4;
         currentWall = 1;
 
         //init room information
         initRoomInformation();
+
+        audioPlayer = gameObject.AddComponent<AudioSource>();
+        audioPlayer.volume = 0.1f; // Because otherwise you wouldn't hear the walking
     }
 
     // Update is called once per frame
@@ -82,6 +88,11 @@ public class DisplayController : MonoBehaviour
         }
 
         previousWall = currentWall;
+    }
+
+    private void Awake()
+    {
+        
     }
 
     public void showImage(string imageName)
@@ -165,5 +176,24 @@ public class DisplayController : MonoBehaviour
         roomInformation.Add("Room2", room2);
         roomInformation.Add("Room3", room3);
         roomInformation.Add("Room4", room4);
+    }
+
+
+    public void PlayPuzzleSuccess()
+    {
+        PlayAudio("Audio/PuzzleSuccess-2");
+    }
+
+    public void PlayPuzzleFail()
+    {
+        PlayAudio("Audio/PuzzleFail");
+    }
+
+    void PlayAudio(string fileName)
+    {
+        if (fileName != null)
+        {
+            audioPlayer.PlayOneShot((AudioClip)Resources.Load(fileName));
+        }
     }
 }
