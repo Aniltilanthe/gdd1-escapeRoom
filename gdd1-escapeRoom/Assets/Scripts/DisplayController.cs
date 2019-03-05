@@ -76,11 +76,9 @@ public class DisplayController : MonoBehaviour
 
             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(room + "/" + wallImageName);
 
-           
-            // if(!completedWalls.Contains(currentWall))
-            //     GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room"+ CurrentRoom.ToString() + "/Wall" + currentWall.ToString());
-            // else
-            //     GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_solved");
+
+            if (completedWalls.Contains(currentWall))
+                 GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_solved");
         }
 
         previousWall = currentWall;
@@ -108,10 +106,8 @@ public class DisplayController : MonoBehaviour
 
         //GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString());
 
-        // if (!completedWalls.Contains(currentWall))
-        //     GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString());
-        // else
-        //     GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_solved");
+        if (completedWalls.Contains(currentWall))
+            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_solved");
 
     }
 

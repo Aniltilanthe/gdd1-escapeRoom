@@ -261,6 +261,7 @@ public class NavigationController : MonoBehaviour
             if (currentDisplay.CurrentWall == 1)
             {
                 var zoomInObject = FindObjectOfType<ZoomInObject>();
+
                 char num = zoomInObject.zoomedInImageName[zoomInObject.zoomedInImageName.Length - 1];
                 Debug.Log("num:" + num);
                 int next = num - '0';
@@ -349,13 +350,7 @@ public class NavigationController : MonoBehaviour
                 char num = zoomInObject.zoomedInImageName[zoomInObject.zoomedInImageName.Length - 1];
                 int next = num - '0';
 
-                if (zoomInObject.zoomedInImageName == "screen_morse_hints")  // TODO how to know which zoomed object is active???
-                {
-                    Debug.Log("FUUUUCK00 " + zoomInObject.zoomedInImageName);
-
-                    onClickZoomReturn();
-                }
-                else if (zoomInObject.zoomedInImageName != "screen_Solution")
+                if (zoomInObject.zoomedInImageName != "screen_Solution")
                 {
                     Debug.Log("ContinueWall4_1 ");
                     if (zoomInObject.zoomedInImageName.Contains("screen_ABJURE_"))
