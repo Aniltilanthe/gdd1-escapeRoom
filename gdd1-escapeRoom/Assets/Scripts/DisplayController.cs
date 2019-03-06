@@ -70,6 +70,9 @@ public class DisplayController : MonoBehaviour
 
         audioPlayer = gameObject.AddComponent<AudioSource>();
         audioPlayer.volume = 0.1f; // Because otherwise you wouldn't hear the walking
+
+
+        loadSavedGame();
     }
 
     // Update is called once per frame
@@ -216,6 +219,18 @@ public class DisplayController : MonoBehaviour
         if (fileName != null)
         {
             audioPlayer.PlayOneShot((AudioClip)Resources.Load(fileName));
+        }
+    }
+
+
+
+    //Loading saved game
+    public void loadSavedGame()
+    {
+        if (SaveLoader.Instance != null)
+        {
+            CurrentRoom = SaveLoader.Instance.CurrentRoom;
+            CurrentWall = SaveLoader.Instance.CurrentWall;
         }
     }
 }
