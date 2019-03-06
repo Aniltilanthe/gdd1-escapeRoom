@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayController : MonoBehaviour
 {
     private DisplayController currentDisplay;
-    
+    public GameObject image;
+
     IDictionary<int, string> codes_screen = new Dictionary<int, string>()
                                             {
                                                 {0, "LL"},
@@ -20,6 +21,7 @@ public class PlayController : MonoBehaviour
     {
         currentDisplay = GameObject.Find("displayImage").GetComponent<DisplayController>();
         currentDisplay.Current_screen_W3 = 0;
+        image = GameObject.FindGameObjectWithTag("ScreenImage");
         //source.playOnAwake = false;
     }
 
@@ -34,54 +36,25 @@ public class PlayController : MonoBehaviour
 
     IEnumerator Waiter()
     {
-        var previous = currentDisplay.GetComponent<SpriteRenderer>().sprite;
-        foreach (char c in codes_screen[currentDisplay.Current_screen_W3])
+        //var previous = currentDisplay.GetComponent<SpriteRenderer>().sprite;
+        char num = currentDisplay.GetComponent<SpriteRenderer>().sprite.name[currentDisplay.GetComponent<SpriteRenderer>().sprite.name.Length - 1];
+        int key = num - '0';
+        foreach (char c in codes_screen[key])
         {
-            Debug.Log("UUUUUUU " + c + currentDisplay.GetComponent<SpriteRenderer>().sprite);
-            Debug.Log("UUUUUUU " + "Room3/Wall3_Screen_wall_mini_screen_solution_" + currentDisplay.Current_screen_W3);
-            currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room3/Wall3_Screen_wall_mini_screen_solution_" + currentDisplay.Current_screen_W3);
-            if(c == 'D')
-                yield return new WaitForSeconds(1.5f);
-            else yield return new WaitForSeconds(3f);
-            currentDisplay.GetComponent<SpriteRenderer>().sprite = previous;
-            yield return new WaitForSeconds(0.75f);
+            //Debug.Log("UUUUUUU " + c + currentDisplay.GetComponent<SpriteRenderer>().sprite);
+            //Debug.Log("UUUUUUU " + "Room3/Wall3_Screen_wall_mini_screen_solution_" + currentDisplay.Current_screen_W3);
+            //currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room3/Wall3_Screen_wall_mini_screen_solution_" + currentDisplay.Current_screen_W3);
+            //if(c == 'D')
+            //    yield return new WaitForSeconds(1.5f);
+            //else yield return new WaitForSeconds(3f);
+            //currentDisplay.GetComponent<SpriteRenderer>().sprite = previous;
+            //yield return new WaitForSeconds(0.25f);
+            image.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/White_square");
+            if (c == 'D')
+                yield return new WaitForSeconds(0.25f);
+            else yield return new WaitForSeconds(0.75f);
+            image.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("None");
+            yield return new WaitForSeconds(0.5f);
         }
     }
-
-    //IEnumerator Waiter()
-    //{
-    //    IDictionary<char, string> currentCodes;
-    //    var zoomInObjects = FindObjectsOfType<ZoomInObject>();
-    //    ZoomInObject zoomInObject = null;
-    //    foreach (var zoomObj in zoomInObjects)
-    //    {
-    //        if (zoomObj.zoomedInImageName.Contains("screen"))
-    //            zoomInObject = zoomObj;
-    //    }
-    //    char key = zoomInObject.zoomedInImageName[zoomInObject.zoomedInImageName.Length - 1];
-    //    if (zoomInObject.zoomedInImageName.Contains("ABJURE"))
-    //        currentCodes = codes_screen_1;
-    //    else if (zoomInObject.zoomedInImageName.Contains("VEX"))
-    //        currentCodes = codes_screen_2;
-    //    else currentCodes = codes_screen_3;
-
-    //    foreach (char c in currentCodes[key])
-    //    {
-    //        AudioClip a;
-    //        if (c == 'D')
-    //        {
-    //            audioo.PlayOneShot((AudioClip)Resources.Load("dot"));
-    //            a = (AudioClip)Resources.Load("dot");
-    //            yield return new WaitForSeconds(a.length + .5f);
-    //        }
-    //        else if (c == 'L')
-    //        {
-    //            audioo.PlayOneShot((AudioClip)Resources.Load("dash"));
-    //            a = (AudioClip)Resources.Load("dash");
-    //            yield return new WaitForSeconds(a.length + .5f);
-    //        }
-
-
-    //    }
-    //}
 }

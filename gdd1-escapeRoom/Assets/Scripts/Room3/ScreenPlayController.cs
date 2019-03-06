@@ -13,8 +13,8 @@ public class ScreenPlayController : MonoBehaviour
                                                 {'0', "DL"},
                                                 {'1', "LDDD"},
                                                 {'2', "DLLL"},
-                                                {'3', "DDD"},
-                                                {'4', "DLL"},
+                                                {'3', "DDL"},
+                                                {'4', "DLD"},
                                                 {'5', "D"}
                                             };
     IDictionary<char, string> codes_screen_2 = new Dictionary<char, string>()
@@ -57,10 +57,12 @@ public class ScreenPlayController : MonoBehaviour
         ZoomInObject zoomInObject = null;
         foreach(var zoomObj in zoomInObjects)
         {
+            Debug.Log("Hm? " + zoomObj.zoomedInImageName);
             if (zoomObj.zoomedInImageName.Contains("screen"))
                 zoomInObject = zoomObj;
         }
         char key = zoomInObject.zoomedInImageName[zoomInObject.zoomedInImageName.Length - 1];
+        Debug.Log("Hm? " + zoomInObject.zoomedInImageName);
         if (zoomInObject.zoomedInImageName.Contains("ABJURE"))
             currentCodes = codes_screen_1;
         else if (zoomInObject.zoomedInImageName.Contains("VEX"))

@@ -23,6 +23,7 @@ TagManager:
   - ScreenButton
   - ScreenInput2
   - ScreenButton2
+  - ScreenImage
   layers:
   - Default
   - TransparentFX

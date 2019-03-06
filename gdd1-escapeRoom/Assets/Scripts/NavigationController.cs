@@ -31,48 +31,33 @@ public class NavigationController : MonoBehaviour
     IDictionary<char, string> solutionRoom4_1 = new Dictionary<char, string>()
                                             {
                                                 {'1', "UDLRL"},
-                                                {'2', "UDLRL"},
-                                                {'3', "UDLRL"},
+                                                {'2', "UURRD"},
+                                                {'3', "DLLRU"},
                                                 {'4', "UDLRL"}
                                             };
     IDictionary<char, string> solutionRoom4_4_1 = new Dictionary<char, string>()
                                             {
-                                                //{'0', "DL"},
-                                                //{'1', "LDDD"},
-                                                //{'2', "DLLL"},
-                                                //{'3', "DDL"},
-                                                //{'4', "DLD"},
-                                                //{'5', "D"}
-                                                 {'0', "D"},
-                                                {'1', "D"},
-                                                {'2', "D"},
-                                                {'3', "D"},
-                                                {'4', "D"},
+                                                {'0', "DL"},
+                                                {'1', "LDDD"},
+                                                {'2', "DLLL"},
+                                                {'3', "DDL"},
+                                                {'4', "DLD"},
                                                 {'5', "D"}
                                             };
     IDictionary<char, string> solutionRoom4_4_2 = new Dictionary<char, string>()
                                             {
-                                                //{'0', "DDDL"},
-                                                //{'1', "D"},
-                                                //{'2', "LDDL"}
-                                                {'0', "D"},
+                                                {'0', "DDDL"},
                                                 {'1', "D"},
-                                                {'2', "D"},
+                                                {'2', "LDDL"}
                                             };
     IDictionary<char, string> solutionRoom4_4_3 = new Dictionary<char, string>()
                                             {
-                                                //{'0', "LLDD"},
-                                                //{'1', "D"},
-                                                //{'2', "DLLD"},
-                                                //{'3', "DDDD"},
-                                                //{'4', "LDLL"},
-                                                //{'5', "DLD"}
-                                                {'0', "D"},
+                                                {'0', "LLDD"},
                                                 {'1', "D"},
-                                                {'2', "D"},
-                                                {'3', "D"},
-                                                {'4', "D"},
-                                                {'5', "D"}
+                                                {'2', "DLLD"},
+                                                {'3', "DDDD"},
+                                                {'4', "LDLL"},
+                                                {'5', "DLD"}
                                             };
 
 
@@ -152,6 +137,32 @@ public class NavigationController : MonoBehaviour
                     light.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Light_Neutral");
                 }
             }
+        }
+
+        if (currentDisplay.CurrentRoom == 3 && currentDisplay.CurrentWall == 3 && currentDisplay.completedScreens.Contains(0) && !currentDisplay.completedScreens.Contains(1) && !currentDisplay.completedScreens.Contains(2) && !currentDisplay.completedScreens.Contains(3))
+        {
+            currentDisplay.showImage("Screen_wall_1");
+        }
+        else if (currentDisplay.CurrentRoom == 3 && currentDisplay.CurrentWall == 3 && currentDisplay.completedScreens.Contains(0) && currentDisplay.completedScreens.Contains(1) && !currentDisplay.completedScreens.Contains(2) && !currentDisplay.completedScreens.Contains(3))
+        {
+            currentDisplay.showImage("Screen_wall_2");
+        }
+        else if (currentDisplay.CurrentRoom == 3 && currentDisplay.CurrentWall == 3 && currentDisplay.completedScreens.Contains(0) && currentDisplay.completedScreens.Contains(1) && currentDisplay.completedScreens.Contains(2) && !currentDisplay.completedScreens.Contains(3))
+        {
+            currentDisplay.showImage("Screen_wall_2");
+        }
+        else if (currentDisplay.CurrentRoom == 3 && currentDisplay.CurrentWall == 3 && currentDisplay.completedScreens.Contains(0) && currentDisplay.completedScreens.Contains(1) && !currentDisplay.completedScreens.Contains(2) && currentDisplay.completedScreens.Contains(3))
+        {
+            currentDisplay.showImage("Screen_wall_2");
+        }
+        else if (currentDisplay.CurrentRoom == 3 && currentDisplay.CurrentWall == 3 && currentDisplay.completedScreens.Contains(0) && currentDisplay.completedScreens.Contains(1) && currentDisplay.completedScreens.Contains(2) && currentDisplay.completedScreens.Contains(3) && !currentDisplay.completedScreens.Contains(4))
+        {
+            currentDisplay.showImage("Screen_wall_3");
+        }
+        else if (currentDisplay.CurrentRoom == 3 && currentDisplay.CurrentWall == 3 && currentDisplay.completedScreens.Contains(0) && currentDisplay.completedScreens.Contains(1) && currentDisplay.completedScreens.Contains(2) && currentDisplay.completedScreens.Contains(3) && currentDisplay.completedScreens.Contains(4))
+        {
+            Debug.Log("KOOOOOOOOOOOOOOOOOOT");
+            currentDisplay.showImage("solved");
         }
 
     }
@@ -242,21 +253,7 @@ public class NavigationController : MonoBehaviour
             }
         }
 
-        if (currentDisplay.CurrentRoom == 1)
-        {
-            //if (solutionRoom1[row, col] != currentRowInput)
-            //{
-            //    solutionMatch = false;
-            //}
-        }
-        else if (currentDisplay.CurrentRoom == 2)
-        {
-            //if (solutionRoom2[row, col] != currentRowInput)
-            //{
-            //    solutionMatch = false;
-            //}
-        }
-        else if (currentDisplay.CurrentRoom == 3)
+        if (currentDisplay.CurrentRoom == 3)
         {
             if (currentDisplay.CurrentWall == 1)
             {
@@ -285,7 +282,7 @@ public class NavigationController : MonoBehaviour
 
 
                     }
-                    else solutionMatch = false;
+                    //else solutionMatch = false;
                 }
                 else
                 {
@@ -324,15 +321,37 @@ public class NavigationController : MonoBehaviour
             }
             else if (currentDisplay.CurrentWall == 3)
             {
-               
+
+
                 Debug.Log(currentDisplay.InsertedPassword_W3);
-                if (currentDisplay.InsertedPassword_W3 == solutionRoom4_3[currentDisplay.Current_screen_W3])
+                Debug.Log("Toto" + currentDisplay.GetComponent<SpriteRenderer>().sprite.name);
+                char num = currentDisplay.GetComponent<SpriteRenderer>().sprite.name[currentDisplay.GetComponent<SpriteRenderer>().sprite.name.Length - 1];
+                int key = num - '0';
+
+                var zoomInObjects = FindObjectsOfType<ZoomInObject>();
+                ZoomInObject zoomInObject = null;
+                foreach (var zoomObj in zoomInObjects)
                 {
-                    currentDisplay.Current_screen_W3++;
-                    Debug.Log("Wall3_Screen_wall_" + currentDisplay.Current_screen_W3);
-                    currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Wall3_Screen_wall_" + currentDisplay.Current_screen_W3);
-                    onClickZoomReturn();
-                    currentDisplay.showImage("Screen_wall_" + currentDisplay.Current_screen_W3);
+                    if (currentDisplay.GetComponent<SpriteRenderer>().sprite.name.Contains(zoomObj.zoomedInImageName))
+                    {
+                        Debug.Log(zoomObj.zoomedInImageName);
+                        zoomInObject = zoomObj;
+                    }
+                }
+
+                if (currentDisplay.InsertedPassword_W3 == solutionRoom4_3[key])
+                {
+                    Debug.Log("Kurva" + key);
+                    zoomInObject.zoomedInImageName = "Screen_wall_mini_screen_solution_" + key;
+                    var screenInputs = GameObject.FindGameObjectsWithTag("ScreenInput2");
+                    foreach (var input in screenInputs)
+                    {
+                        input.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("None");
+                    }
+                    currentDisplay.showImage(zoomInObject.zoomedInImageName);
+                    currentDisplay.completedScreens.Add(key);
+                    if(key == 4)
+                        currentDisplay.completedWalls.Add(currentDisplay.CurrentWall);
 
                 }
                 
@@ -388,7 +407,7 @@ public class NavigationController : MonoBehaviour
 
 
                         }
-                        else solutionMatch = false;
+                        //else solutionMatch = false;
                     }
                     else if (zoomInObject.zoomedInImageName.Contains("screen_VEX_"))
                     {
@@ -416,7 +435,7 @@ public class NavigationController : MonoBehaviour
                             }
 
                         }
-                        else solutionMatch = false;
+                        //else solutionMatch = false;
                     }
                     else if (zoomInObject.zoomedInImageName.Contains("screen_ZEPHYR_"))
                     {
@@ -446,7 +465,7 @@ public class NavigationController : MonoBehaviour
                             }
 
                         }
-                        else solutionMatch = false;
+                        //else solutionMatch = false;
                     }
                 }
                 else

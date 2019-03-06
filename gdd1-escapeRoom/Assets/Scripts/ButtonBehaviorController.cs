@@ -54,7 +54,7 @@ public class ButtonBehaviorController : MonoBehaviour
                 GetComponent<Button>().enabled = true;
             }
 
-            if (currentDisplay.CurrentWall == 2 && ThisButtonId == ButtonId.continueButton)
+            if (currentDisplay.CurrentRoom != 3 && currentDisplay.CurrentWall == 2 && ThisButtonId == ButtonId.continueButton)
             {
                 if (GetComponent<Image>() != null)
                 {
