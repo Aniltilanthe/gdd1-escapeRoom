@@ -30,7 +30,7 @@ public class GameSceneManager : MonoBehaviour
     public void SaveGame()
     {
         // 1
-        SaveController save = CreateSaveGameObject();
+        SaveSettings save = CreateSaveGameObject();
 
         // 2
         BinaryFormatter bf = new BinaryFormatter();
@@ -41,9 +41,9 @@ public class GameSceneManager : MonoBehaviour
         Debug.Log("Game Saved");
     }
 
-    private SaveController CreateSaveGameObject()
+    private SaveSettings CreateSaveGameObject()
     {
-        SaveController save = new SaveController();
+        SaveSettings save = new SaveSettings();
 
         save.currentRoom = currentDisplay.CurrentRoom;
         save.currentWall = currentDisplay.CurrentWall;

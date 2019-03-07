@@ -9,14 +9,14 @@ public class SaveLoader : Singleton<SaveLoader>
 
     public int CurrentRoom = 1;
     public int CurrentWall = 1;
-    
+
 
     public void setRoomWall(int newRoom, int newWall)
     {
         CurrentRoom = newRoom;
         CurrentWall = newWall;
     }
-
+    
     public void reset()
     {
         CurrentRoom = 1;

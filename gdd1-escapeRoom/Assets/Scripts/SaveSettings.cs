@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class SaveController 
+public class SaveSettings 
 {
 
     public int currentRoom = 1;

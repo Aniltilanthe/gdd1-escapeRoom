@@ -69,8 +69,13 @@ public class DisplayController : MonoBehaviour
         initRoomInformation();
 
         audioPlayer = gameObject.AddComponent<AudioSource>();
-        audioPlayer.volume = 0.1f; // Because otherwise you wouldn't hear the walking
-
+        if (PlayerPrefs.HasKey("volume"))
+        {
+            audioPlayer.volume = PlayerPrefs.GetFloat("volume");
+        }   else
+        {
+            audioPlayer.volume = 0.1f;
+        }
 
         loadSavedGame();
     }
@@ -81,25 +86,29 @@ public class DisplayController : MonoBehaviour
         if (currentWall != previousWall    &&  CurrentState.ToString().Equals(State.normal.ToString()) ) {
 
             Debug.Log("CURRENT WALL WWWWWWWWWWWWWWWWWWWWWWW " + currentWall);
+            Debug.Log("CURRENT CurrentRoom WWWWWWWWWWWWWWWWWWWWWWW " + CurrentRoom);
             string room = "Room" + CurrentRoom.ToString();
             Room  currentRoomObj = roomInformation[room];
             string wallImageName = currentRoomObj.wallInformation["Wall" + currentWall.ToString()];
 
             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(room + "/" + wallImageName);
 
+            if (CurrentRoom == 3)
+            {
+                if (CurrentRoom == 3 && CurrentWall == 3 && completedScreens.Contains(0) && !completedScreens.Contains(1) && !completedScreens.Contains(2) && !completedScreens.Contains(3))
+                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_1");
+                else if (CurrentRoom == 3 && CurrentWall == 3 && completedScreens.Contains(0) && completedScreens.Contains(1) && !completedScreens.Contains(2) && !completedScreens.Contains(3))
+                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_2");
+                else if (CurrentRoom == 3 && CurrentWall == 3 && completedScreens.Contains(0) && completedScreens.Contains(1) && completedScreens.Contains(2) && !completedScreens.Contains(3))
+                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_2");
+                else if (CurrentRoom == 3 && CurrentWall == 3 && completedScreens.Contains(0) && completedScreens.Contains(1) && !completedScreens.Contains(2) && completedScreens.Contains(3))
+                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_2");
+                else if (CurrentRoom == 3 && CurrentWall == 3 && completedScreens.Contains(0) && completedScreens.Contains(1) && completedScreens.Contains(2) && completedScreens.Contains(3))
+                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_3");
+                if (completedWalls.Contains(currentWall))
+                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_solved");
+            }
 
-            if (CurrentRoom == 3 && CurrentWall == 3 && completedScreens.Contains(0) && !completedScreens.Contains(1) && !completedScreens.Contains(2) && !completedScreens.Contains(3))
-                GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_1");
-            else if (CurrentRoom == 3 && CurrentWall == 3 && completedScreens.Contains(0) && completedScreens.Contains(1) && !completedScreens.Contains(2) && !completedScreens.Contains(3))
-                GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_2");
-            else if (CurrentRoom == 3 && CurrentWall == 3 && completedScreens.Contains(0) && completedScreens.Contains(1) && completedScreens.Contains(2) && !completedScreens.Contains(3))
-                GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_2");
-            else if (CurrentRoom == 3 && CurrentWall == 3 && completedScreens.Contains(0) && completedScreens.Contains(1) && !completedScreens.Contains(2) && completedScreens.Contains(3))
-                GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_2");
-            else if (CurrentRoom == 3 && CurrentWall == 3 && completedScreens.Contains(0) && completedScreens.Contains(1) && completedScreens.Contains(2) && completedScreens.Contains(3))
-                GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_3");
-            if (completedWalls.Contains(currentWall))
-                GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_solved");
         }
 
         previousWall = currentWall;
