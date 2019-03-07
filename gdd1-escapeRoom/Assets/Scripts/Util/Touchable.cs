@@ -1,25 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿// Touchable.cs
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEditor;
 
-public class Touchable : Text
+namespace UnityEngine.UI
 {
-    protected override void Awake()
+
+    public class Touchable : Text
     {
-        base.Awake();
+        protected override void Awake()
+        {
+            base.Awake();
+        }
     }
 }
 
-// Touchable_Editor component, to prevent treating the component as a Text object.
- 
- 
- [CustomEditor(typeof(Touchable))]
-public class Touchable_Editor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        // Do nothing
-    }
-}

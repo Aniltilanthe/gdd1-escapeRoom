@@ -242,6 +242,5 @@ public class DisplayController : MonoBehaviour
             CurrentWall = SaveLoader.Instance.CurrentWall;
             previousWall = CurrentWall - 1;
         }
-        CurrentRoom = 3;
     }
 }
