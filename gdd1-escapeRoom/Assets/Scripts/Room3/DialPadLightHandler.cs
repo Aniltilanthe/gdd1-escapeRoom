@@ -25,9 +25,16 @@ public class DialPadLightHandler : MonoBehaviour
         Debug.Log("RED");
         if (currentDisplay.Counter_W2 < dialPadLights.Length && currentDisplay.completedWalls.Count == 3)
         {
-            dialPadLights[currentDisplay.Counter_W2].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Light_OFF");
-            currentDisplay.InsertedPassword_W2 += "R";
+            foreach (var light in dialPadLights)
+            {
+                if (light.name == "Light" + (currentDisplay.Counter_W2 + 1))
+                {
+                    light.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Light_OFF");
+                    currentDisplay.InsertedPassword_W2 += "R";
+                }
+            }
             currentDisplay.Counter_W2++;
+
         }
     }
 
@@ -36,9 +43,16 @@ public class DialPadLightHandler : MonoBehaviour
         Debug.Log("GREEN");
         if (currentDisplay.Counter_W2 < dialPadLights.Length && currentDisplay.completedWalls.Count == 3)
         {
-            dialPadLights[currentDisplay.Counter_W2].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Light_Green");
-            currentDisplay.InsertedPassword_W2 += "G";
+            foreach (var light in dialPadLights)
+            {
+                if (light.name == "Light" + (currentDisplay.Counter_W2 + 1))
+                {
+                    light.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Light_Green");
+                    currentDisplay.InsertedPassword_W2 += "G";
+                }
+            }
             currentDisplay.Counter_W2++;
+
         }
     }
 
@@ -47,9 +61,16 @@ public class DialPadLightHandler : MonoBehaviour
         Debug.Log("BLUE");
         if (currentDisplay.Counter_W2 < dialPadLights.Length && currentDisplay.completedWalls.Count == 3)
         {
-            dialPadLights[currentDisplay.Counter_W2].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Light_Blue");
-            currentDisplay.InsertedPassword_W2 += "B";
+            foreach (var light in dialPadLights)
+            {
+                if (light.name == "Light" + (currentDisplay.Counter_W2 + 1))
+                {
+                    light.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Light_Blue");
+                    currentDisplay.InsertedPassword_W2 += "B";
+                }
+            }
             currentDisplay.Counter_W2++;
+
         }
     }
 
@@ -58,8 +79,15 @@ public class DialPadLightHandler : MonoBehaviour
         Debug.Log("YELLOW");
         if (currentDisplay.Counter_W2 < dialPadLights.Length && currentDisplay.completedWalls.Count == 3)
         {
-            dialPadLights[currentDisplay.Counter_W2].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Light_ON");
-            currentDisplay.InsertedPassword_W2 += "Y";
+            foreach (var light in dialPadLights)
+            {
+                if (light.name == "Light" + (currentDisplay.Counter_W2 + 1))
+                {
+                    light.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Light_ON");
+                    currentDisplay.InsertedPassword_W2 += "Y";
+                    
+                }
+            }
             currentDisplay.Counter_W2++;
         }
     }

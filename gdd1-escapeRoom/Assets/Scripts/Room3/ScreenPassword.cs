@@ -17,12 +17,19 @@ public class ScreenPassword : MonoBehaviour
     void Update()
     {
         currentDisplay.InsertedPassword_W4 = "";
-        foreach (GameObject screenIn in screenInputs)
+        for (int i = 1; i <= 4; i++)
         {
-            if (screenIn.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Dot"))
-                currentDisplay.InsertedPassword_W4 += "D";
-            else if (screenIn.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Line"))
-                currentDisplay.InsertedPassword_W4 += "L";
+            foreach (GameObject screenIn in screenInputs)
+            {
+                if (screenIn.name == "Input" + i)
+                {
+                    if (screenIn.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Dot"))
+                        currentDisplay.InsertedPassword_W4 += "D";
+                    else if (screenIn.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Line"))
+                        currentDisplay.InsertedPassword_W4 += "L";
+                }
+            }
+
         }
     }
 }

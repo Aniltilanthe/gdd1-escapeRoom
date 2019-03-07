@@ -17,12 +17,18 @@ public class Wall3Password : MonoBehaviour
     void Update()
     {
         currentDisplay.InsertedPassword_W3 = "";
-        foreach (GameObject screenIn in screenInputs)
+        for (int i = 1; i <= 4; i++)
         {
-            if (screenIn.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Dot"))
-                currentDisplay.InsertedPassword_W3 += "D";
-            else if (screenIn.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Line"))
-                currentDisplay.InsertedPassword_W3 += "L";
+            foreach (GameObject input in screenInputs)
+            {
+                if (input.name == "Input" + i)
+                {
+                    if (input.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Dot"))
+                        currentDisplay.InsertedPassword_W3 += "D";
+                    else if (input.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Line"))
+                        currentDisplay.InsertedPassword_W3 += "L";
+                }
+            }
         }
     }
 }

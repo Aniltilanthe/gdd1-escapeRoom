@@ -24,13 +24,19 @@ public class RotatingDialsHandler : MonoBehaviour
     public void RotateDial(int dial_num)
     {
         Debug.Log("HMMM"+rotatingDials[dial_num]);
-        if (rotatingDials[dial_num].GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Rot_Arrow_Down"))
-            rotatingDials[dial_num].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Rot_Arrow_Left");
-        else if (rotatingDials[dial_num].GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Rot_Arrow_Left"))
-            rotatingDials[dial_num].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Rot_Arrow_Up");
-        else if (rotatingDials[dial_num].GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Rot_Arrow_Up"))
-            rotatingDials[dial_num].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Rot_Arrow_Right");
-        else if (rotatingDials[dial_num].GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Rot_Arrow_Right"))
-            rotatingDials[dial_num].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Rot_Arrow_Down");
+        foreach (var dial in rotatingDials)
+        {
+            if (dial.name == "Arrow" + (dial_num + 1))
+            {
+                if (dial.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Rot_Arrow_Down"))
+                    dial.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Rot_Arrow_Left");
+                else if (dial.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Rot_Arrow_Left"))
+                    dial.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Rot_Arrow_Up");
+                else if (dial.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Rot_Arrow_Up"))
+                    dial.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Rot_Arrow_Right");
+                else if (dial.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Rot_Arrow_Right"))
+                    dial.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Rot_Arrow_Down");
+            }
+        }
     }
 }

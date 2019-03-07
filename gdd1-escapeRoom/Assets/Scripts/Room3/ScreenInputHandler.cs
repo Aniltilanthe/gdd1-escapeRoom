@@ -23,11 +23,17 @@ public class ScreenInputHandler : MonoBehaviour
     public void ChangeInput(int dial_num)
     {
         Debug.Log("ChangeInput" + screenInputs.Length);
-        if (screenInputs[dial_num].GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("None"))
-            screenInputs[dial_num].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Dot");
-        else if (screenInputs[dial_num].GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Dot"))
-            screenInputs[dial_num].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Line");
-        else if (screenInputs[dial_num].GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Line"))
-            screenInputs[dial_num].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("None");
+        foreach (var input in screenInputs)
+        {
+            if (input.name == "Input" + (dial_num + 1))
+            {
+                if (input.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("None"))
+                    input.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Dot");
+                else if (input.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Dot"))
+                    input.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Line");
+                else if (input.GetComponent<SpriteRenderer>().sprite == Resources.Load<Sprite>("General/Line"))
+                    input.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("None");
+            }
+        }
     }
 }

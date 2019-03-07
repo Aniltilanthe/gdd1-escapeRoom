@@ -72,7 +72,8 @@ public class NavigationController : MonoBehaviour
     }
 
     public void OnRightClickArrow() {
-        currentDisplay.CurrentWall = currentDisplay.CurrentWall + 1;
+        if(currentDisplay.CurrentRoom != 4)
+            currentDisplay.CurrentWall = currentDisplay.CurrentWall + 1;
 
         foreach (GameObject zoomInObjectBehavior in zoomInObjectBehaviors)
         {
@@ -82,7 +83,8 @@ public class NavigationController : MonoBehaviour
 
     public void OnLeftClickArrow()
     {
-        currentDisplay.CurrentWall = currentDisplay.CurrentWall - 1;
+        if (currentDisplay.CurrentRoom != 4)
+            currentDisplay.CurrentWall = currentDisplay.CurrentWall - 1;
 
         foreach (GameObject zoomInObjectBehavior in zoomInObjectBehaviors)
         {
