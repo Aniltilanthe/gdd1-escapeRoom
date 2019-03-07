@@ -151,7 +151,7 @@ public class DisplayController : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_2");
         else if (CurrentRoom == 3 && CurrentWall == 3 && completedScreens.Contains(0) && completedScreens.Contains(1) && completedScreens.Contains(2) && completedScreens.Contains(3))
             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_Screen_wall_3");
-        if (completedWalls.Contains(currentWall))
+        if (CurrentRoom == 3 && completedWalls.Contains(currentWall))
             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Room" + CurrentRoom.ToString() + "/Wall" + currentWall.ToString() + "_solved");
 
     }
@@ -240,6 +240,8 @@ public class DisplayController : MonoBehaviour
         {
             CurrentRoom = SaveLoader.Instance.CurrentRoom;
             CurrentWall = SaveLoader.Instance.CurrentWall;
+            previousWall = CurrentWall - 1;
         }
+        CurrentRoom = 3;
     }
 }

@@ -13,7 +13,7 @@ public class DialPadLightsController : MonoBehaviour
         currentDisplay = GameObject.Find("displayImage").GetComponent<DisplayController>();
         dialPadLights = GameObject.FindGameObjectsWithTag("DialPadLight");
         GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("General/Light_Neutral");
-        Debug.Log("start");
+        Debug.Log("start4-dialPad");
     }
 
     // Update is called once per frame

@@ -139,6 +139,18 @@ public class NavigationController : MonoBehaviour
             }
         }
 
+        if (currentDisplay.CurrentRoom == 3 && currentDisplay.CurrentWall == 3)
+        {
+            if (currentDisplay.Counter_W2 == 0)
+            {
+                var screenInputs = GameObject.FindGameObjectsWithTag("ScreenInput2");
+                foreach (var input in screenInputs)
+                {
+                    input.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("None");
+                }
+            }
+        }
+
         if (currentDisplay.CurrentRoom == 3 && currentDisplay.CurrentWall == 3 && currentDisplay.completedScreens.Contains(0) && !currentDisplay.completedScreens.Contains(1) && !currentDisplay.completedScreens.Contains(2) && !currentDisplay.completedScreens.Contains(3))
         {
             currentDisplay.showImage("Screen_wall_1");
